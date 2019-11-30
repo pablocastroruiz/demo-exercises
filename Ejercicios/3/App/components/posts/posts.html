@@ -1,0 +1,8 @@
+<h2>Posts</h2>
+<div ng-repeat="post in vm.posts">
+	<label >#{{post.id}} {{post.title}}</label>
+	<div ng-repeat="comment in vm.comments" ng-if="comment.postId == post.id">
+		<comment-component comment="comment"></comment-component>
+	</div>
+	<hr/>
+</div>
